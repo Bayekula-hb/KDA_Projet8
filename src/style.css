@@ -10,9 +10,9 @@
 }
 html{
   font-size: 62.5%;
-}
-#container {
-  background: linear-gradient(rgb(38, 106, 118), rgb(7, 35, 86));
+  height: 100vh; 
+  background: linear-gradient(90deg, #2d777b, #156d79, #006376, #005873, #004d6f, #00436a, #003763, #062c5a);
+
 }
 header, .card {
   display: flex;  
@@ -34,10 +34,11 @@ h1 {
   font-family: sega, sans-serif;
   width: auto;
   font-size: 8rem;
-  color: #fff;
+  color: #55CBC5;
   display: block;
 }
-.input--recherche {
+.input--recherche::placeholder {
+  text-align: center;
 }
 .container--card{
   width: 98%;
@@ -55,14 +56,50 @@ h1 {
   margin: 1% 0.5%;
   border-radius: 12px;
   font-size: 2rem;
-  scale: (1);
+  transform: scale(1);
+  transition: transform 400ms;
 }
 .card:hover{
-  scale: (1.2);
+  transform: scale(1.15);
 }
 .img--avatar{
   width: 90%;
 }
 p{
   margin: 1% 0%;
+}
+@media all and ( max-device-width : 480px )
+{
+  header{
+    width: 90%;
+    justify-content: center;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  .container--card{
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+  }
+  .card{
+    background-color: rgb(158,235,207);
+    width: 45%;
+    height: 22%;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 1% 0.5%;
+    border-radius: 12px;
+    font-size: 2rem;
+    scale: (1);
+  }
+  .card p{
+    width: 90%;
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0% auto;
+  }
 }

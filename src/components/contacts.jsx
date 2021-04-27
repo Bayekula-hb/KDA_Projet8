@@ -18,24 +18,43 @@ const ContactFunction = (props) => {
       });
   }, []);
   function inputChanged(e) {
+    
     let inputValue = e.target.value.toUpperCase();
-    // contactTempo.map(({ id, name, email }) => {
-    //   contactFilter.push({ id, name, email });
-    // });
 
     const contactTempoFilter = contact.filter((Element) => {
       return Element.name.toUpperCase().includes(inputValue);
     });
     setContactTempo(contactTempoFilter);
   }
+  const clickCard= (e)=>{
+    const contactClick = contactTempo.filter((contact)=>{
+      return contact.id === e;
+    })
+    const contactClickFilter = contactClick.map(({name, phone, username, website, email})=>{
+      return {name, phone, username, website, email}
+    });
+    console.log("Contact Click : ",contactClick);
+    console.log("Contact Click Filter : ",contactClickFilter[0].website);
+    return(
+      <Card 
+      key={contactClick[0].id}
+      avatar={linkImg + contactClick[0].website}
+      key={contactClick[0].id}
+      nom={contactClick[0].name}
+      mail={contactClick[0].email}
+    />
+    );
+  }
   function renderContacts(tableau) {
     return tableau.map(function (contact) {
       return (
         <Card
+          key={contact.id}
           avatar={linkImg + contact.id}
           key={contact.id}
           nom={contact.name}
           mail={contact.email}
+          onClick={()=>clickCard(contact.id)}
         />
       );
     });
@@ -46,7 +65,7 @@ const ContactFunction = (props) => {
       <header>
         <h1>Mes amis robots</h1>
         <input
-          type="text"
+          type="search"
           placeholder="Rechercher par nom"
           onChange={inputChanged}
         />
