@@ -1,0 +1,68 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+@font-face{
+  font-family: "sega";
+  src: url("SEGA.TTF");
+  font-weight: 700;
+}
+html{
+  font-size: 62.5%;
+}
+#container {
+  background: linear-gradient(rgb(38, 106, 118), rgb(7, 35, 86));
+}
+header, .card {
+  display: flex;  
+  flex-wrap: wrap;
+}
+header{
+  width: 90%;
+  flex-direction: column;
+  justify-content: center;
+}
+input,
+h1 {
+  width: 20%;
+  margin: 0% auto;
+  padding: 1%;
+  font-weight: 900;
+}
+h1 {
+  font-family: sega, sans-serif;
+  width: auto;
+  font-size: 8rem;
+  color: #fff;
+  display: block;
+}
+.input--recherche {
+}
+.container--card{
+  width: 98%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;  
+}
+.card{
+  background-color: rgb(158,235,207);
+  width: 20%;
+  height: 22%;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  margin: 1% 0.5%;
+  border-radius: 12px;
+  font-size: 2rem;
+  scale: (1);
+}
+.card:hover{
+  scale: (1.2);
+}
+.img--avatar{
+  width: 90%;
+}
+p{
+  margin: 1% 0%;
+}
