@@ -36,6 +36,21 @@ h1 {
   font-size: 8rem;
   color: #55CBC5;
   display: block;
+  letter-spacing: 0.3rem;
+}
+.div--chargement{
+  position: absolute;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, #2d777b, #156d79, #006376, #005873, #004d6f, #00436a, #003763, #062c5a);
+}
+.class-chargement{
+  position: absolute;
+  left: 30%;
+  top: 35%;
+  color: #55CBC5;
+  font-size: 8rem;
 }
 .input--recherche::placeholder {
   text-align: center;
@@ -60,13 +75,33 @@ h1 {
   transition: transform 400ms;
 }
 .card:hover{
-  transform: scale(1.15);
+  transform: scale(1.08);
+  color: #fff;
+  background-color: #f368e0;
 }
 .img--avatar{
   width: 90%;
 }
 p{
   margin: 1% 0%;
+}
+.lien--card{
+  text-transform:uppercase;
+  width: 50%;
+  margin: 0% auto;
+  text-align: center;
+  padding: 1%;
+  text-decoration: none;
+  font-weight: 800;
+  color: #fff;
+}
+.lien--card:hover{
+  color: blue;
+  border: 2px solid #fff;
+  margin: 2% 0%;
+}
+.h2--robot{
+  color: red!important;
 }
 @media all and ( max-device-width : 480px )
 {
@@ -102,4 +137,25 @@ p{
     text-align: center;
     margin: 0% auto;
   }
+}
+.div--robot{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  color: aliceblue;
+  text-align: left;
+  font-size: 1.9rem;
+}
+.link--back{
+  text-decoration: none;
+  font-family: "sega";
+  font-weight: 600;
+  color: #55CBC5;
+  padding: 0.4%;
+  border: 2px solid #55CBC5;
+}
+.img--robot--C{
+  width: 15%;
+
 }

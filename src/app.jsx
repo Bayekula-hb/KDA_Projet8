@@ -1,15 +1,19 @@
 import "./style.css"
 import ContactFunction from "./components/contacts";
 import { Route, Switch } from "react-router";
-import Robot from "./components/robot";
+import Composant from "./components/composant";
 
 const App = () => {
+
   return (
       <>
-          <ContactFunction />
+          
+          <header>
+            <h1>Mes amis robots</h1>
+          </header>
           <Switch>
-            <Route  exact path="/" components={ContactFunction} ></Route>
-            <Route  exact path="/robot" components={Robot} > </Route>
+            <Route  exact path="/" component={ContactFunction} ></Route>
+            <Route path="/composant/:id" component={Composant}></Route>
           </Switch>
       </>
     )
